@@ -8,6 +8,14 @@ import {
 } from "@/components/ui/navigation-menu";
 import { navigationMenuTriggerStyle } from "@/components/ui/variants";
 import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import {
   Sheet,
   SheetContent,
   SheetHeader,
@@ -36,16 +44,17 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <select
-      onChange={(e) => changeLanguage(e.target.value)}
-      value={i18n.language}
-      aria-label="Language"
-      title="Language"
-      className="cursor-pointer"
-    >
-      <option value="en">EN</option>
-      <option value="pt">PT-BR</option>
-    </select>
+    <Select onValueChange={changeLanguage} value={i18n.language}>
+      <SelectTrigger className="w-fit">
+        <SelectValue placeholder="Language" />
+      </SelectTrigger>
+      <SelectContent>
+        <SelectGroup>
+          <SelectItem value="en">EN</SelectItem>
+          <SelectItem value="pt">PT-BR</SelectItem>
+        </SelectGroup>
+      </SelectContent>
+    </Select>
   );
 };
 
@@ -74,13 +83,21 @@ const Header = ({ isDarkMode, toggleDarkMode }: HeaderProps) => {
             ))}
           </NavigationMenuList>
         </NavigationMenu>
-        <button type="button" onClick={toggleDarkMode} className="cursor-pointer">
+        <button
+          type="button"
+          onClick={toggleDarkMode}
+          className="cursor-pointer"
+        >
           {isDarkMode ? <Sun /> : <Moon />}
         </button>
         <LanguageSwitcher />
       </div>
       <div className="md:hidden flex items-center gap-4">
-        <button type="button" onClick={toggleDarkMode} className="cursor-pointer">
+        <button
+          type="button"
+          onClick={toggleDarkMode}
+          className="cursor-pointer"
+        >
           {isDarkMode ? <Sun /> : <Moon />}
         </button>
         <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>

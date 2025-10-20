@@ -43,9 +43,9 @@
 
 :root {
   --radius: 0.625rem;
-  --background: #FFFFFF; /* white */
+  --background: #ffffff; /* white */
   --foreground: #0f0f0f; /* coal */
-  --card: #F8F8FF; /* ghost-white */
+  --card: #f8f8ff; /* ghost-white */
   --card-foreground: #0f0f0f; /* coal */
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
@@ -78,9 +78,9 @@
 
 .dark {
   --background: #000000; /* black */
-  --foreground: #FFFFFF; /* white */
+  --foreground: #ffffff; /* white */
   --card: #0f0f0f; /* oil */
-  --card-foreground: #FFFFFF; /* white */
+  --card-foreground: #ffffff; /* white */
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
   --primary: oklch(0.922 0 0);
@@ -117,4 +117,34 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-down {
+  animation: fade-in-down 1s ease-out;
+}
+
+.fade-in-up {
+  animation: fade-in-up 1s ease-out;
 }
