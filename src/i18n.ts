@@ -37,6 +37,12 @@ i18n
           project4_description: "This is a description of project 4.",
           viewProject: "View Project",
           mainStack: "My Main Stack",
+          contactsPage: {
+            title: "Contacts",
+            github: "Github",
+            instagram: "Instagram",
+            linkedin: "Linkedin"
+          }
         },
       },
       pt: {
@@ -60,6 +66,12 @@ i18n
           project4_description: "Esta é a descrição do projeto 4.",
           viewProject: "Ver Projeto",
           mainStack: "Minhas Principais Tecnologias",
+          contactsPage: {
+            title: "Contatos",
+            github: "Github",
+            instagram: "Instagram",
+            linkedin: "Linkedin"
+          }
         },
       },
     },
