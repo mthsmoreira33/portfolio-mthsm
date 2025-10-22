@@ -29,7 +29,7 @@ const Home: React.FC = () => {
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
     },
     {
-      name: "Tailwind CSS",
+      name: "Tailwind",
       image:
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
     },
