@@ -19,14 +19,19 @@ const Home: React.FC = () => {
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg",
     },
     {
-      name: "Node JS",
+      name: "Python",
       image:
-        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
     },
     {
       name: "React",
       image:
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+    },
+    {
+      name: "Tailwind CSS",
+      image:
+        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
     },
     {
       name: "PostgreSQL",

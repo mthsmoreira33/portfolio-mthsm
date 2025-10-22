@@ -1,12 +1,17 @@
+import pcdevGif from "../assets/pcdev.gif";
+import staticPcdev from "../assets/logo.png";
+
 export const projects = [
   {
     id: "project1",
-    image: "https://via.placeholder.com/150",
-    link: "#",
+    image: pcdevGif,
+    staticImage: staticPcdev,
+    link: "https://github.com/Squad-17-Recode/pcdevapp",
   },
   {
     id: "project2",
-    image: "https://via.placeholder.com/150",
+    image: pcdevGif,
+    staticImage: staticPcdev,
     link: "#",
   },
   {

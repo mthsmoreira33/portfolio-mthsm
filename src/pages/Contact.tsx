@@ -121,7 +121,7 @@ const Contact = ({ isDarkMode }: ContactProps) => {
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col items-center justify-center h-150">
+    <div className="flex flex-col items-center justify-center h-150 fade-in-down">
       <h1 className="text-5xl font-bold pb-10 fade-in-down">{t("contactsPage.title")}</h1>
       <ul className="flex gap-10 fade-in-up">
         <li>
@@ -137,7 +137,7 @@ const Contact = ({ isDarkMode }: ContactProps) => {
         </li>
         <li>
           <a
-            href="https://www.instagram.com/mthsmoreira33"
+            href="https://www.instagram.com/mthsmoreira33_dev"
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center"

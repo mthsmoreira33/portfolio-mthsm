@@ -27,8 +27,9 @@ i18n
           projectsPage: {
             title: "Projects",
           },
-          project1_title: "Project 1",
-          project1_description: "This is a description of project 1.",
+          project1_title: "PC Dev",
+          project1_description:
+            "Job Board web application focused on tech jobs for PwD. Created with React, Java Spring Boot and PostgreSQL.",
           project2_title: "Project 2",
           project2_description: "This is a description of project 2.",
           project3_title: "Project 3",
@@ -41,8 +42,8 @@ i18n
             title: "Contacts",
             github: "Github",
             instagram: "Instagram",
-            linkedin: "Linkedin"
-          }
+            linkedin: "Linkedin",
+          },
         },
       },
       pt: {
@@ -56,8 +57,9 @@ i18n
           projectsPage: {
             title: "Projetos",
           },
-          project1_title: "Projeto 1",
-          project1_description: "Esta é a descrição do projeto 1.",
+          project1_title: "PC Dev",
+          project1_description:
+            "Aplicação web de vagas de emprego focada em vagas tech para PcD. Criada com React, Java Spring Boot e PostgreSQL.",
           project2_title: "Projeto 2",
           project2_description: "Esta é a descrição do projeto 2.",
           project3_title: "Projeto 3",
@@ -70,8 +72,8 @@ i18n
             title: "Contatos",
             github: "Github",
             instagram: "Instagram",
-            linkedin: "Linkedin"
-          }
+            linkedin: "Linkedin",
+          },
         },
       },
     },

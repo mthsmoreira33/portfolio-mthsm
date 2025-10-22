@@ -12,7 +12,7 @@ const Projects = () => {
   }));
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 fade-in-down">
       <h1 className="text-3xl font-bold mb-10 text-center fade-in-down">{t("projectsPage.title")}</h1>
       <div className="flex flex-wrap justify-center gap-4 fade-in-up">
         {projects.map((project, index) => (
