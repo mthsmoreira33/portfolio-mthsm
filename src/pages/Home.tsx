@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import profileImage from "../assets/1669859258325.jpeg";
+import profileImage from "../assets/mthsm.jpg";
 import { useTranslation } from "react-i18next";
 import { getAge } from "@/lib/utils";
 import Projects from "./Projects";
@@ -61,7 +61,7 @@ const Home: React.FC = () => {
       <img
         src={profileImage}
         alt="Placeholder"
-        className="w-40 h-40 mb-4 rounded-full fade-in-down"
+        className="w-40 h-42 mb-4 rounded-full fade-in-down"
       />
       <div className="max-w-2xl p-5 mx-auto rounded-lg shadow-md bg-card text-card-foreground fade-in-up">
         <h1 className="mb-2 text-3xl font-bold text-center">{t("aboutMe")}</h1>
