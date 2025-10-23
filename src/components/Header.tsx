@@ -52,6 +52,7 @@ const LanguageSwitcher = () => {
         <SelectGroup>
           <SelectItem value="en">EN</SelectItem>
           <SelectItem value="pt">PT-BR</SelectItem>
+          <SelectItem value="es">ES</SelectItem>
         </SelectGroup>
       </SelectContent>
     </Select>

@@ -1,11 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import profileImage from "../assets/1669859258325.jpeg";
 import { useTranslation } from "react-i18next";
 import { getAge } from "@/lib/utils";
+import Projects from "./Projects";
+import Contact from "./Contact";
 
 const Home: React.FC = () => {
   const { t } = useTranslation();
   const age = getAge("30/01/2000");
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      setIsDarkMode(document.body.classList.contains("dark"));
+    });
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+    // Set initial value
+    setIsDarkMode(document.body.classList.contains("dark"));
+    return () => observer.disconnect();
+  }, []);
 
   const techStack = [
     {
@@ -61,6 +77,12 @@ const Home: React.FC = () => {
             </div>
           ))}
         </div>
+      </div>
+      <div className="w-full py-30">
+        <Projects />
+      </div>
+      <div className="w-full">
+        <Contact isDarkMode={isDarkMode} />
       </div>
     </div>
   );

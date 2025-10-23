@@ -1,11 +1,13 @@
 import { useTranslation } from "react-i18next";
 
+
+
 interface GithubLogoProps {
   isDarkMode: boolean;
 }
 
 const GithubLogo = ({ isDarkMode }: GithubLogoProps) => (
-  <svg viewBox="0 0 128 128" className="w-20 h-20">
+  <svg viewBox="0 0 128 128" className="w-12 h-12 sm:w-20 sm:h-20">
     <g fill={isDarkMode ? "#FFFFFF" : "#181616"}>
       <path
         fillRule="evenodd"
@@ -18,7 +20,7 @@ const GithubLogo = ({ isDarkMode }: GithubLogoProps) => (
 );
 
 const LinkedinLogo = () => (
-  <svg viewBox="0 0 128 128" className="w-20 h-20">
+  <svg viewBox="0 0 128 128" className="w-12 h-12 sm:w-20 sm:h-20">
     <path fill="#0076b2" d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3z"></path>
     <path fill="#fff" d="M21.06 48.73h18.11V107H21.06zm9.06-29a10.5 10.5 0 11-10.5 10.49 10.5 10.5 0 0110.5-10.49M50.53 48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75v32H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53z"></path>
   </svg>
@@ -26,7 +28,7 @@ const LinkedinLogo = () => (
 
 const InstagramLogo = () => (
   <svg
-    className="w-20 h-20"
+    className="w-12 h-12 sm:w-20 sm:h-20"
     viewBox="0 0 32 32"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -113,9 +115,30 @@ const InstagramLogo = () => (
   </svg>
 );
 
+const EmailLogo = () => (
+  <svg
+    className="w-12 h-12 sm:w-20 sm:h-20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+    <polyline points="22,6 12,13 2,6"></polyline>
+  </svg>
+);
+
 interface ContactProps {
   isDarkMode: boolean;
 }
+
+
+
+
+
+
 
 const Contact = ({ isDarkMode }: ContactProps) => {
   const { t } = useTranslation();
@@ -123,7 +146,7 @@ const Contact = ({ isDarkMode }: ContactProps) => {
   return (
     <div className="flex flex-col items-center justify-center h-150 fade-in-down">
       <h1 className="text-5xl font-bold pb-10 fade-in-down">{t("contactsPage.title")}</h1>
-      <ul className="flex gap-10 fade-in-up">
+      <ul className="flex flex-wrap justify-center gap-5 sm:gap-10 fade-in-up">
         <li>
           <a
             href="https://github.com/mthsmoreira33"
@@ -157,7 +180,18 @@ const Contact = ({ isDarkMode }: ContactProps) => {
             <span>{t("contactsPage.linkedin")}</span>
           </a>
         </li>
+        <li>
+          <a
+            href="mailto:mthsmoreira59@gmail.com"
+            className="flex flex-col items-center"
+          >
+            <EmailLogo />
+            <span>{t("contactsPage.email")}</span>
+          </a>
+        </li>
       </ul>
+
+
     </div>
   );
 };
